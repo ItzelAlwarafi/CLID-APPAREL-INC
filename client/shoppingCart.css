@@ -1,0 +1,92 @@
+#promo_banner {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    margin-bottom: 20px;
+}
+#menubar{
+    width: 100%;
+    height: 60px;
+}
+#blackbar1{
+    width: 100%;
+    height: 20px;
+    background-color: black;
+}
+#blackbar2{
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    margin-top: 90px;
+}
+#container1{
+    border: solid black 1px;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 40%;
+    margin-top: 60px;
+    margin-left: 7%
+}
+#personalInfo{
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+#name {
+    margin: 20px 10px 10px 0px;
+    color: grey;
+}
+#address {
+    margin: 20px 10px 10px 0px;
+    color: grey;
+}
+#email {
+    margin: 20px 10px 10px 0px;
+    color: grey;
+}
+#phone {
+    margin: 20px 10px 35px 0px;
+    color: grey;
+}
+#submit {
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+#container2{
+    border: solid black 1px;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 40%;
+    margin-top: 60px;
+    margin-left: 7%
+}
+#shoppingList{
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+#itemList{
+    border: none;
+    height: 300px;
+    width: 450px;
+}
+#paynow{
+    margin: 0 auto;
+}
+#containers {
+    display: flex;
+}
+#footer{
+    width: 100%;
+    height: 20%;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    margin: 40px 20px 0px 20px;
+}
