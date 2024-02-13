@@ -1,0 +1,60 @@
+
+body{
+    background-color: black;
+}
+.Header{
+background-color: black;
+}
+.topNavBar{
+    background-color:white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0;
+}
+.topNavBar:hover{
+    background-color:black ;
+    font-size: 20px;
+    text-align: center;
+}
+.bar-item {
+    display: inline;
+    color: black;
+    text-decoration: none; 
+    margin-right: 80px;
+    padding: 10px;
+    letter-spacing: 5px;
+  }
+  .bar-item:hover{
+    background-color: black;
+    color: white;
+    
+  }
+  .container {
+    width: 100%;
+    height: 70vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+  }
+  
+  img {
+    --brightness: 0.75;
+    --grayscale: 1;
+    transition: flex var(--transition), filter var(--transition);
+    height: 100%;
+    filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  img:hover {
+    --brightness: 1.15;
+    --grayscale: 0;
+    flex: var(--magnifier);
+  }
+ 
+ 
