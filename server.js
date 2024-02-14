@@ -32,4 +32,4 @@ app.get("/clothes", clothesController.getAllClothes)
 
 app.get("/clothes/:query", clothesController.getClothingType)
 
-app.get('/clothes/:')
+app.get('/clothes/gender/:gender', clothesController.getClothesByGender)
