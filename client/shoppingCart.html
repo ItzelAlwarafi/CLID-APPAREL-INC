@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"/>
+    <link href="shoppingCart.css" rel="stylesheet"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="shoppingCart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,9 +13,17 @@
 </head>
 <body>
     <div id="promo_banner"></div>
-    <div id="menubar"></div>
+    <div class="topNavBar">
+        <a href="#" class="bar-item">Home</a>
+        <a href="#" class="bar-item"> New</a>
+        <a href="#" class="bar-item">Men</a>
+        <a href="#" class="bar-item">Women</a>
+        <a href="#" class="bar-item">Sale</a>
+      </div>
+
     <div id="blackbar1"></div>
     <div id="containers">
+        <div id="yourInfo">Your Information</div>
     <div id ="container1">
         <div id="personalInfo">
             <input type="text" id="name" value="Name" style="height: 30px; width: 400px">
@@ -25,6 +33,7 @@
             <button id="submit" style ="height: 25px; width: 200px">Submit</button>
         </div>
     </div>
+    <div id="itemSummary">Item Summary</div>
     <div id="container2">
         <div id="shoppingList">
             <div id="itemList"></div>
