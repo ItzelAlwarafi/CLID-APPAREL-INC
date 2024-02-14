@@ -21,7 +21,7 @@ background-color: black;
   letter-spacing: 2;
   font-family: "Clip";
   text-transform: uppercase;
-  font-size:  25px;
+  
   color: #ffe6ff;
   text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
     -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
@@ -241,15 +241,24 @@ background-color: black;
     color: white;
     
   }
-  .container {
-    width: 100%;
-    height: 70vmin;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--gap);
+ 
+  .gallery{
+   margin-top: 20px;
+   display: flex;
+    flex-direction: row;
+    margin: 20px;
+    float: left;
+    align-content: center;
+   
+
   }
-  
+
+
+  #Product {
+    --brightness: 1.15;
+    --grayscale: 0;
+   
+  }
   img {
     --brightness: 0.75;
     --grayscale: 1;
@@ -270,17 +279,20 @@ background-color: black;
 
  #quantity {
     display: flex;
-  flex-direction: column;
-  width: 25px;
+  flex-direction: row;
+  width: 20px;
+ 
  }
  .value {
       border: 1px solid #adadad;
       border-radius: 3px;
-      margin: 2px 0;
       padding: 4px;
       text-align: center;
       font-weight: bolder;
+      width: 20px; 
+      height: 10px;
       -moz-appearance: textfield;
+      
       
 }
 .value::-webkit-outer-spin-button,
@@ -298,10 +310,11 @@ background-color: black;
       background: white;
       color:black;
       font-weight: bolder;
-      height: 25px;
+      height: 20px;
     }
   
     .btn {
+       
         background: #ededed;
         background-image: -webkit-linear-gradient(top, #ededed, #8f9294);
         background-image: -moz-linear-gradient(top, #ededed, #8f9294);
@@ -314,8 +327,14 @@ background-color: black;
         font-family: Arial;
         color: #ffffff;
         font-size: 10px;
-        padding: 5px 10px 5px 10px;
-        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 5px 10px 5px;
+        height: 2px;
+        display: block;
+        line-height: 0px;
+        
+       
+       
       }
       
       .btn:hover {
@@ -328,6 +347,7 @@ background-color: black;
         text-decoration: none;
       }
   #footer{
+  
     width: 100%;
     height: 20%;
     border: none;
@@ -336,12 +356,17 @@ background-color: black;
     color :white;
     text-align:center;
     letter-spacing: 3px;
+   display: flex;
+   
    
   
 }
-
+span{
+    margin-top: 200px;
+}
 #socialMedia{
     width: 40px;
     height: fit-content;
     margin-left: 10px;
+    
   }
