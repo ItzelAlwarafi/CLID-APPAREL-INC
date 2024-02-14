@@ -1,10 +1,10 @@
 const db = require('../db')
-const { Clothes } = require('../models/clothes');
+const Clothes =require('../models/clothes');
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const clothes = [
+    const clothings = [
         {
                 productName: "Loose Carpenter Jeans",
                 type: "Denim",
@@ -170,8 +170,7 @@ const main = async () => {
                 machineWashable: false
             }
         ]
-
-    await Clothes.insertMany(clothes)
+    await Clothes.insertMany(clothings)
     console.log('Created clothes!')
 }
     const run = async () => {
