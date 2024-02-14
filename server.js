@@ -29,4 +29,7 @@ app.post("/customers", customerControllers.createCustomer)
 app.delete("/customers/:id", customerControllers.deleteCustomer)
 
 app.get("/clothes", clothesController.getAllClothes)
-app.get("/clothes/:id", clothesController.getOneClothes)
+
+app.get("/clothes/:query", clothesController.getClothingType)
+
+app.get('/clothes/:')
