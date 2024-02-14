@@ -1,21 +1,24 @@
 var counterValue = document.querySelectorAll("#counter-value");
 var counterIncrement = document.querySelectorAll("#counter-increment");
 var counterDecrement = document.querySelectorAll("#counter-decrement");
-var count = 0;
+// let count = 0;
 
-for (let counter of counterIncrement ){
-  counter.addEventListener('click', () => {
-    this.count++
-    this.counterValue.setAttribute("value", count);
-})
+for (let i=0; i<counterIncrement.length; i++){
+  counterIncrement[i].addEventListener('click', ()=>{
+    count=counterValue[i].value
+    count++
+    counterValue[i].setAttribute("value", count)
+  })
 }
 
-// this.counterIncrement.addEventListener('click', () => {
-//   this.count++
-//   this.counterValue.setAttribute("value", count);
-// });
+for (let i=0; i<counterDecrement.length; i++){
+  counterDecrement[i].addEventListener('click', ()=>{
+    count=counterValue[i].value
+    if(count==0){
+      return
+    }
+    count--
+    counterValue[i].setAttribute("value", count)
+  })
+}
 
-this.counterDecrement.addEventListener('click', () => {
-  this.count--
-  this.counterValue.setAttribute("value", count);
-});
