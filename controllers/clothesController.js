@@ -1,4 +1,4 @@
-const {Clothes} = require('../models/clothes')
+const Clothes = require('../models/clothes')
 
 const getAllClothes = async (req, res) => {
    try {
@@ -8,21 +8,30 @@ const getAllClothes = async (req, res) => {
       return res.status(500).send(e.message)
    }
 }
-const getOneClothes = async (req, res) => {
+
+const getClothingType= async (req, res) => {
    try {
-      const { title } = req.params
-      const clothes = await Clothes.findOne({title: title})
-      .populate('clothes')
-      .exec()
-      console.log(clothes)
-      if (clothes) {
-         return res.json(clothes)
-        }
-        return res.status(404).send('Clothing item cannot be found')
-     } catch (e) {
-        return res.status(500).send(e.message)
+     const { query } = req.params;
+     if (query == "Denim" || query == "Sweater" || query == "Sneakers" || query == "Clogs") {
+       const clothing = await Clothes.find({type: query});
+       if (clothing) {
+         res.send(clothing);
+       } else res.send("No clothing with that type found");
+     } else {
+       const clothings = await Clothes.find({});
+       if (!clothings) throw Error("clothings not found");
+       for (let clothing of clothings) {
+         if (clothing.productName == query) {
+           res.json(clothing);
+         }
+       }
      }
-  }
+   } catch (e) {
+     console.log(e);
+     res.send("Clothing not found!");
+   }
+ };
+
   const createClothes = async (req, res) => {
    try{
    const clothes = await Clothes.create(req.body)
@@ -57,24 +66,12 @@ const deleteClothes = async (req, res) => {
       return res.status(500).send(e.message)
    }
 }
-   const getClothesByType = async (req, res) => {
-      try {
-          const { name } = req.params
-          const clothes = await Clothes.find({ type : name })
-          if (!clothes) {
-              return res.status(404).send(' Clothing type not found !')
-          }
-          res.json(clothes)
-      } catch (error) {
-          console.error(error)
-          res.status(500).send('Internal Server Error')
-      }
-  }
+
 
   const getClothesByGender = async (req, res) => {
    try {
        const { gender } = req.params
-       const clothes = await Clothes.findOne({ gender : gender })
+       const clothes = await Clothes.find({ gender : gender })
        if (!clothes) {
            return res.status(404).send(' Clothing type not found !')
        }
@@ -88,9 +85,9 @@ const deleteClothes = async (req, res) => {
 
   module.exports = {
    getAllClothes,
-  getOneClothes,
   createClothes,
   updateClothes,
   deleteClothes,
-  getClothesByType
+  getClothingType,
+  getClothesByGender
   }
