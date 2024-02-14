@@ -10,7 +10,8 @@ const Clothes = new Schema(
         color: {type: String, required: true},
         gender: {type: String, required: true},
         description: {type: String, required: true},
-        machineWashable: {type: Boolean, required: true}
+        machineWashable: {type: Boolean, required: true},
+        img: {type: String, required: true}
     },
 
 
