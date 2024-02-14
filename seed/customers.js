@@ -7,8 +7,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
     const customers = [
         {
-            firstName: "Lane",
-            lastName: "Nichols",
+            name: "Lane Nichols",
             address: {
                 street: '5194 N Grey Hawk Drive',
                 city:'Lehi',
@@ -20,8 +19,7 @@ const main = async () => {
             favoritedItems: []
         },
         {
-            firstName: "Daisy",
-            lastName: "Ban",
+            name: "Daisy Ban",
             address: {
                 street: '9441 Heather Ave.',
                 city:'Elizabeth',
@@ -33,8 +31,7 @@ const main = async () => {
             favoritedItems: []
         },
         {
-            firstName: "Clora",
-            lastName: "Alwarafi",
+            name: "Clora V",
             address: {
                 street: '7050 Lantern St.',
                 city:'Snohomish',
@@ -46,8 +43,7 @@ const main = async () => {
             favoritedItems: []
         },
         {
-            firstName: "Itzel",
-            lastName: "Alwarafi",
+            name: "Itzel Alwarafi",
             address: {
                 street: '273 Inidian Spring Court',
                 city:'Kissimmee',
@@ -59,8 +55,7 @@ const main = async () => {
             favoritedItems: []
         },
         {
-            firstName: "Lani",
-            lastName: "LeBaron",
+            name: "Lani LeBaron",
             address: {
                 street: '87 Mechanic Drive',
                 city:'Quakertown',
@@ -72,8 +67,7 @@ const main = async () => {
             favoritedItems: []
         },
         {
-            firstName: "Todd",
-            lastName: "Nichols",
+            name: "Todd Nichols",
             address: {
                 street: '5410 Cooper Court',
                 city:'Bartlesville',

@@ -32,7 +32,7 @@ const getCustomer= async (req, res) => {
         const customers = await Customer.find({});
         if (!customers) throw Error("customers not found");
         for (let customer of customers) {
-          if (customer.lastName == query) {
+          if (customer.name == query) {
             res.json(customer);
           }
         }

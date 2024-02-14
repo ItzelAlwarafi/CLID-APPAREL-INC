@@ -1,4 +1,4 @@
-const { Clothes} = require('../models')
+const {Clothes} = require('../models/clothes')
 
 const getAllClothes = async (req, res) => {
    try {
@@ -18,7 +18,7 @@ const getOneClothes = async (req, res) => {
       if (clothes) {
          return res.json(clothes)
         }
-        return res.status(404).send('Recipe cannot be found')
+        return res.status(404).send('Clothing item cannot be found')
      } catch (e) {
         return res.status(500).send(e.message)
      }
@@ -40,7 +40,7 @@ const updateClothes = async (req, res) => {
       if (clothes) {
          return res.status(200).json(movie)
       }
-      throw new Error('Recipe not found')
+      throw new Error('Clothin item not found')
    } catch (e) {
       return res.status(500).send(e.message)
    }
@@ -60,16 +60,30 @@ const deleteClothes = async (req, res) => {
    const getClothesByType = async (req, res) => {
       try {
           const { name } = req.params
-          const clothes = await Clothes.findOne({ type : name }) 
+          const clothes = await Clothes.find({ type : name })
           if (!clothes) {
-              return res.status(404).send(' Type not found !')
+              return res.status(404).send(' Clothing type not found !')
           }
           res.json(clothes)
       } catch (error) {
           console.error(error)
-          res.status(500).send('Internal Server Error') 
+          res.status(500).send('Internal Server Error')
       }
   }
+
+  const getClothesByGender = async (req, res) => {
+   try {
+       const { gender } = req.params
+       const clothes = await Clothes.findOne({ gender : gender })
+       if (!clothes) {
+           return res.status(404).send(' Clothing type not found !')
+       }
+       res.json(clothes)
+   } catch (error) {
+       console.error(error)
+       res.status(500).send('Internal Server Error')
+   }
+}
 //app.get('/clothes/:name',clothesController.getClothesByType)
 
   module.exports = {
@@ -78,5 +92,5 @@ const deleteClothes = async (req, res) => {
   createClothes,
   updateClothes,
   deleteClothes,
-  getClothesByName
+  getClothesByType
   }
