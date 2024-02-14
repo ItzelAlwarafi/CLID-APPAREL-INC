@@ -4,9 +4,20 @@
   "description": "CLID Apparel <br> ├── client<br> │   ├── index.html<br> │   ├── style.css<br> │   └── script.js<br> ├── controllers<br> |   ├── Clothes.js<br> |   └── Customer.js<br> ├── db<br> |   └── index.js<br> ├── models<br> |   ├── Clothes.js  product/type/sizes/price/color/gender<br> |   ├── Customer.js name/id/address/email/phone (Form-user activity) <br> |   └── index.js<br> ├── package.json<br> └── server.js<br> <br> Front End- Itzel & Daisy<br> <br> <br> Back End - Lane & Clora<br> Customer - Lane<br> Clothes - Clora <br>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+ "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
