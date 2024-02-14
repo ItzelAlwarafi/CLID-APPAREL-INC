@@ -10,5 +10,5 @@ const sale = document.querySelector("saleMenu")
 
 
 sale.addEventListener('click', async () => {
-    let imagesrc = response.clothes.
+    let imagesrc = response.clothes
 })
