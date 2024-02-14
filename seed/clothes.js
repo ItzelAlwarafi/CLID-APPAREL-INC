@@ -5,16 +5,17 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const clothings = [
-        {
+            { Jeans1: {
                 productName: "Loose Carpenter Jeans",
                 type: "Denim",
                 sizes: ["28", "29", "30", "31", "32", "33", "34", "36", "38", "40" ],
                 prices: 79.95,
-                color: "White",
+                color: "white",
                 gender: "men",
                 description: "It's vibe with a relaxed straight carpenter jean with an effortless slouch",
-                machineWashable: true
-            },
+                machineWashable: true,
+                img: "image/[Jeans] Men Loose Carpenter Jeans- white.jpeg"
+             } },
 
             {
                 productName: "Carpenter Jeans",
@@ -24,7 +25,8 @@ const main = async () => {
                 color: "Dark Wash",
                 gender: "men",
                 description: "It's a relaxed carpenter jean with an slouch",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Jeans]Men Loose Carpenter Jeans.avif"
             },
 
             {
@@ -35,7 +37,8 @@ const main = async () => {
                 color: "Dark Wash",
                 gender: "women",
                 description: "Old school. Meet new school. Our vintage-inspired pair that hugs all your curves.",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Jeans] Women High Rise Cotton - Dark.avif"
             },
 
             {
@@ -43,10 +46,11 @@ const main = async () => {
                 type: "Denim",
                 sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35" ],
                 prices: 47,
-                color: "Dark Wash",
+                color: "Light",
                 gender: "women",
                 description: "A relaxed essential straight jean with an effortless slouch. ",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Jeans] Women High Rise Cotton - Light.avif"
             },
 
             {
@@ -57,7 +61,8 @@ const main = async () => {
                 color: "Dark Indigo",
                 gender: "unisex",
                 description: "From Harlem to the world. Inspired by archival denim, rooted in western Americana & made for all.",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Jeans]Unisex Loose Jeans.avif"
             },
 
             {
@@ -65,10 +70,11 @@ const main = async () => {
                 type: "Sweater",
                 sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL" ],
                 prices: 34.99,
-                color: "Khaki Heather",
+                color: "beige",
                 gender: "men",
                 description: "This sweater is made with 52% recycled polyester. Soft poly-wool blend sweater.",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Sweater] Men Crewneck - Beige.avif"
             },
 
             {
@@ -79,7 +85,8 @@ const main = async () => {
                 color: "Dark Night",
                 gender: "men",
                 description: "Textured cotton-wool blend sweater. Ribbed crewneck.",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/[Sweater]Men Textured Crew Neck - Dark Night.avif"
             },
 
             {
@@ -87,10 +94,11 @@ const main = async () => {
                 type: "Sweater",
                 sizes: ["XXS", "XS", "S", "M", "L", "XL", "XXL"],
                 prices: 59.99,
-                color: "Pink Spacedye",
+                color: "pink",
                 gender: "women",
                 description: "This sweater is made with 24% recycled polyester. Soft shaker-stitch sweater.",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Sweater] Women Shaker-Stitch - pink.avif"
             },
 
             {
@@ -98,10 +106,11 @@ const main = async () => {
                 type: "Sweater",
                 sizes: ["XXS", "XS", "S", "M", "L", "XL", "XXL"],
                 prices: 69.95,
-                color: "Sage Green",
+                color: "green",
                 gender: "women",
                 description: "Soft, slightly cropped cotton pointelle sweater. Scalloped crewneck.",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Sweater]Women Pointelle Sweater - green.avif"
             },
 
             {
@@ -109,10 +118,11 @@ const main = async () => {
                 type: "Sweater",
                 sizes: ["XXXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL" ],
                 prices: 54.95,
-                color: "Bedrock Beige",
+                color: "beige",
                 gender: "unisex",
                 description: "Our softer than soft sweats. Made to be your new everywhere, always-on essential.",
-                machineWashable: true
+                machineWashable: true,
+                img: "image/Untitleddesign.jpg"
             },
 
             {
@@ -120,10 +130,11 @@ const main = async () => {
                 type: "Sneakers",
                 sizes: ["8", "9", "9.5", "10", "10.5", "11", "11.5", "12", "13"],
                 prices: 145,
-                color: "Black",
+                color: "black",
                 gender: "men",
                 description: "Your new day-in, day-out, versatile sneakers. Comfortable, breathable, stain and odor resistant too.",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Shoes]Men Alpine Sneakers - black.webp"
             },
 
             {
@@ -131,21 +142,11 @@ const main = async () => {
                 type: "Sneaker",
                 sizes: ["8", "9", "9.5", "10", "10.5", "11", "11.5", "12", "13" ],
                 prices: 155,
-                color: "Bedrock Beige",
+                color: "navy",
                 gender: "unisex",
                 description: "Our softer than soft sweats. Made to be your new everywhere, always-on essential.",
-                machineWashable: false
-            },
-
-            {
-                productName: "Faux-Leather Clogs",
-                type: "Clogs",
-                sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "11" ],
-                prices: 24.97,
-                color: "Silver Metallic",
-                gender: "women",
-                description: "Smooth faux-leather heeled clogs.Faux-wood sole and heel.",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Shoes] Men Brady Sneakers - Navy.webp"
             },
 
             {
@@ -153,10 +154,11 @@ const main = async () => {
                 type: "Sneaker",
                 sizes: ["5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
                 prices: 145,
-                color: "White-Black",
+                color: "white",
                 gender: "women",
                 description: "Your new day-in, day-out, versatile sneakers. Comfortable, breathable, stain and odor resistant too. ",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Shoes]Women Lace Up Sneaker - white.avif"
             },
 
             {
@@ -164,10 +166,11 @@ const main = async () => {
                 type: "Sneaker",
                 sizes: ["5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "11" ],
                 prices: 95,
-                color: "Tan Woven",
+                color: "brown",
                 gender: "unisex",
                 description: "Vegan, platform sneaker with woven knit detailing.Textile upper with manmade outsole.",
-                machineWashable: false
+                machineWashable: false,
+                img: "image/[Shoes]Women Go To Platform Sneaker - brown.avif"
             }
         ]
     await Clothes.insertMany(clothings)
