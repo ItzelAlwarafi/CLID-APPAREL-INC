@@ -3,8 +3,7 @@ const { Schema } = require("mongoose");
 
 const Customer = new Schema(
   {
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    name: { type: String, required: true },
     address: {
         street: { type: String, required: true },
         city: { type: String, required: true },
