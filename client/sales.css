@@ -252,7 +252,10 @@ background-color: black;
    
 
   }
-
+.prodOpt{
+  color: white;
+  font-size: 10px;
+}
 
   #Product {
     --brightness: 1.15;
