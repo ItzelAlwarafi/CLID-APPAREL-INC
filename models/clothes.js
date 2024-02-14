@@ -4,7 +4,7 @@ const Clothes = new Schema(
     {
         productName: {type: String, required: true },
         type: {type: String, required: true},
-        sizes: {type: Array, required: true},
+        sizes: [{type: String, required: true}],
         prices: {type: Number, required: true},
         color: {type: String, required: true},
         gender: {type: String, required: true},
@@ -13,7 +13,7 @@ const Clothes = new Schema(
     },
 
 
-    { timestamps: true} 
+    { timestamps: true}
 )
 
 module.exports = Clothes

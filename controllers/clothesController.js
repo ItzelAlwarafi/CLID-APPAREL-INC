@@ -60,7 +60,7 @@ const deleteClothes = async (req, res) => {
    const getClothesByType = async (req, res) => {
       try {
           const { name } = req.params
-          const clothes = await Clothes.findOne({ type : name })
+          const clothes = await Clothes.find({ type : name })
           if (!clothes) {
               return res.status(404).send(' Clothing type not found !')
           }
@@ -70,6 +70,20 @@ const deleteClothes = async (req, res) => {
           res.status(500).send('Internal Server Error')
       }
   }
+
+  const getClothesByGender = async (req, res) => {
+   try {
+       const { gender } = req.params
+       const clothes = await Clothes.findOne({ gender : gender })
+       if (!clothes) {
+           return res.status(404).send(' Clothing type not found !')
+       }
+       res.json(clothes)
+   } catch (error) {
+       console.error(error)
+       res.status(500).send('Internal Server Error')
+   }
+}
 //app.get('/clothes/:name',clothesController.getClothesByType)
 
   module.exports = {
