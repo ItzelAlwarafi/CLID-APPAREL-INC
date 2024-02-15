@@ -293,7 +293,7 @@ background-color: black;
     overflow: hidden;
     flex: 1;
   }
-  
+
   img:hover {
     --brightness: 1.15;
     --grayscale: 0;
@@ -336,7 +336,7 @@ background-color: black;
       font-weight: bolder;
       height: 20px;
     }
-  
+ 
     .btn {
        
         background: #ededed;
