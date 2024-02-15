@@ -21,7 +21,7 @@ document.addEventListener( 'DOMContentLoaded', async () => {
         price1.innerHTML = (`$${price1Data}`)
         color1.innerHTML = (`${color1Data}`)
         product1.src = product1src
-    productName.innerHTML = (`${productNameData}`)
+   // productName.innerHTML = (`${productNameData}`)
 
     const product2 = document.querySelector("#Product2")
         const price2 = document.querySelector("#price2")
@@ -65,7 +65,67 @@ document.addEventListener( 'DOMContentLoaded', async () => {
     // let productNameData = response.data[0].productName
         price5.innerHTML = (`$${price5Data}`)
         color5.innerHTML = (`${color5Data}`)
-        product5.src = product5src
+        product5.src = product5src 
+        
+
+        const product6 = document.querySelector("#Product6")
+        const price6 = document.querySelector("#price6")
+        const color6 = document.querySelector("#color6")
+        let price6Data = response.data[4].prices
+        let color6Data = response.data[4].color
+        let product6src = response.data[4].img
+    // let productNameData = response.data[0].productName
+        price6.innerHTML = (`$${price6Data}`)
+        color6.innerHTML = (`${color6Data}`)
+        product6.src = product6src 
+
+
+
+        const product7 = document.querySelector("#Product7")
+        const price7 = document.querySelector("#price7")
+        const color7 = document.querySelector("#color7")
+        let price7Data = response.data[4].prices
+        let color7Data = response.data[4].color
+        let product7src = response.data[4].img
+    // let productNameData = response.data[0].productName
+        price7.innerHTML = (`$${price7Data}`)
+        color7.innerHTML = (`${color7Data}`)
+        product7.src = product7src
+
+        const product8 = document.querySelector("#Product8")
+        const price8 = document.querySelector("#price8")
+        const color8 = document.querySelector("#color8")
+        let price8Data = response.data[4].prices
+        let color8Data = response.data[4].color
+        let product8src = response.data[4].img
+    // let productNameData = response.data[0].productName
+        price8.innerHTML = (`$${price8Data}`)
+        color8.innerHTML = (`${color8Data}`)
+        product8.src = product8src
+
+
+        const product9 = document.querySelector("#Product9")
+        const price9 = document.querySelector("#price9")
+        const color9 = document.querySelector("#color9")
+        let price9Data = response.data[4].prices
+        let color9Data = response.data[4].color
+        let product9src = response.data[4].img
+    // let productNameData = response.data[0].productName
+        price9.innerHTML = (`$${price9Data}`)
+        color9.innerHTML = (`${color9Data}`)
+        product9.src = product9src
+
+
+        const product10 = document.querySelector("#Product10")
+        const price10 = document.querySelector("#price10")
+        const color10 = document.querySelector("#color10")
+        let price10Data = response.data[4].prices
+        let color10Data = response.data[4].color
+        let product10src = response.data[4].img
+    // let productNameData = response.data[0].productName
+        price10.innerHTML = (`$${price10Data}`)
+        color10.innerHTML = (`${color10Data}`)
+        product10.src = product10src
 
 } catch (error) {
         console.log(error)
