@@ -8,7 +8,7 @@ background-color: black;
 
 .promo {
   font-size: 20px;
-  margin-left:10%;
+  margin-left:5%;
   display: inline;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ background-color: black;
 #shopCart{
   margin-top: 0;
   margin-left: 12%;
-  width: 40px;
+  width: 30px;
   height:fit-content;
 }
 @keyframes blink {
@@ -265,9 +265,9 @@ background-color: black;
   }
   #Product:hover{
     
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      transform: scale(1.2);
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
       transition: 1s ease;
      
   }
