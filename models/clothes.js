@@ -1,4 +1,5 @@
-const {Schema} = require('mongoose')
+const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
 const Clothes = new Schema(
     {
@@ -9,11 +10,11 @@ const Clothes = new Schema(
         color: {type: String, required: true},
         gender: {type: String, required: true},
         description: {type: String, required: true},
-        machineWashable: {type: Boolean, required: true}
+        machineWashable: {type: Boolean, required: true},
+        img: {type: String, required: true}
     },
 
 
-    { timestamps: true} 
+    { timestamps: true}
 )
-
-module.exports = Clothes
+module.exports=mongoose.model("Clothes", Clothes)
