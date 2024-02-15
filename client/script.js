@@ -21,7 +21,7 @@ document.addEventListener( 'DOMContentLoaded', async () => {
         price1.innerHTML = (`$${price1Data}`)
         color1.innerHTML = (`${color1Data}`)
         product1.src = product1src
-    // productName.innerHTML = (`${productNameData}`)
+    productName.innerHTML = (`${productNameData}`)
 
     const product2 = document.querySelector("#Product2")
         const price2 = document.querySelector("#price2")
