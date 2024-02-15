@@ -251,17 +251,28 @@ background-color: black;
     align-content: center;
     color: white;
     font-size: 8px;
+  
   }
+
+.gallery2{
+  margin-top: 15px;
+}
 .prodOpt{
   color: white;
   font-size: 10px;
   font-weight: 1;
 }
 
+.NameTag{
+  font-size: 15px;
 
-  .Product {
   
+
+}
+  .Product {
+ 
     transition: 1s ease;
+    margin-bottom: 20px;
   }
   .Product:hover{
     
@@ -346,6 +357,7 @@ background-color: black;
         display: block;
         line-height: 0px;
         margin-left: 45px;
+      
         
        
        
