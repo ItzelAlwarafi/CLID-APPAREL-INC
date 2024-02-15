@@ -118,11 +118,11 @@ const main = async () => {
                 type: "Sweater",
                 sizes: ["XXXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL" ],
                 prices: 54.95,
-                color: "beige",
+                color: "white",
                 gender: "unisex",
                 description: "Our softer than soft sweats. Made to be your new everywhere, always-on essential.",
                 machineWashable: true,
-                img: "../image/Untitleddesign.jpg"
+                img: "../image/[Hoodie]Women white.avif"
             },
 
             {

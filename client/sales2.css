@@ -5,12 +5,14 @@ body{
 .Header{
 background-color: black;
 }
-
+#promo {
+  margin-left: 20%
+}
 .promo {
   font-size: 20px;
-  margin-left:5%;
+  
   display: inline;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-image: radial-gradient(
     ellipse 50% 35% at 50% 50%,
@@ -33,38 +35,6 @@ background-color: black;
   margin-left: 12%;
   width: 30px;
   height:fit-content;
-}
-
-@media only screen and (max-width: 767px) {
-    .promo {
-        font-size: 16px;
-        margin-left: 2%;
-    }
-    #shopCart {
-        margin-left: 8%;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-        .promo {
-            font-size: 16px;
-            margin-left: 2%;
-        }
-        #shopCart {
-            margin-left: 8%;
-        }
-
-}
-
-@media only screen and (min-width: 1024px) {
-    .promo {
-        font-size: 16px;
-        margin-left: 2%;
-    }
-    #shopCart {
-        margin-left: 8%;
-    }
-
 }
 
 @keyframes blink {
@@ -338,7 +308,7 @@ background-color: black;
       width: 20px; 
       height: 10px;
       -moz-appearance: textfield;
-      
+
       
 }
 .value::-webkit-outer-spin-button,
@@ -435,3 +405,103 @@ span{
   #footer span {
     font-size: 12px; /* Adjust font size as needed for responsiveness */
   }
+
+@media only screen and (min-width: 1050px) and (max-width: 1220px) {
+    .promo {
+        position: absolute;
+        font-size: 20px;
+        margin-left: 30%;
+        margin-bottom: 20px;
+    }
+    #promo1{
+      margin-top: -40px;
+    }
+    #promo2{
+      margin-top: 10px;
+    }
+
+    #shopCart {
+        margin-left: 6%;
+    }
+    
+    .bar-item {
+      color: black;
+      letter-spacing: 5px;
+    }
+    .topNavBar{
+      background-color:white;
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 770px) and (max-width: 1049px) {
+  .promo {
+      position: absolute;
+      font-size: 14px;
+      margin-left: 30%;
+      margin-bottom: 20px;
+  }
+  #promo1{
+    margin-top: -40px;
+  }
+  #promo2{
+    margin-top: 10px;
+  }
+
+  #shopCart {
+      margin-left: 7%;
+  }
+  .bar-item {
+    color: black;
+    letter-spacing: 3px;
+  }
+  .topNavBar{
+    background-color:white;
+    font-size: 14.5px;
+    padding: 10px;
+    margin-top: 0;
+}
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 769px) {
+  #logo{
+    margin-top: 0;
+    margin-left: 2%;
+    width: 70px;
+    height:fit-content;
+  }
+  .promo {
+      position: absolute;
+      font-size: 13px;
+      margin-left: 30%;
+      margin-bottom: 20px;
+  }
+  #promo1{
+    margin-top: -40px;
+  }
+  #promo2{
+    margin-top: 10px;
+  }
+  #shopCart{
+    margin-top: 0;
+    margin-left: 6%;
+    width: 23px;
+    height:fit-content;
+  }
+  .bar-item {
+    color: black;
+    letter-spacing: 5px;
+  }
+  .topNavBar{
+    display: grid;
+    background-color:white;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 0;
+}
+
+}
