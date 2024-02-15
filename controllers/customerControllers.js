@@ -10,43 +10,31 @@ const getAllCustomers = async (req, res) => {
 };
 
 
-// const getCustomer = async (req, res) => {
-//   const { id } = req.params;
-//   const customer = await Customer.find();
-//   if (customer[id]) {
-//     res.send(customer[id]);
-//   } else res.send("No customer with that index found");
-// };
-
-
-//will test if this works accurately, if not will use function above
-const getCustomer= async (req, res) => {
-    try {
-      const { query } = req.params;
-      if (typeof query == "number") {
-        const customer = await Customer.find();
-        if (customer[id]) {
-          res.send(customer[id]);
-        } else res.send("No customer with that index found");
-      } else {
-        const customers = await Customer.find({});
-        if (!customers) throw Error("customers not found");
-        for (let customer of customers) {
-          if (customer.name == query) {
-            res.json(customer);
-          }
-        }
-      }
-    } catch (e) {
-      console.log(e);
-      res.send("Customer not found!");
+const getCustomer = async (req, res) => {
+  try{
+    const { query } = req.params;
+  const customers = await Customer.find();
+  if (customers[query]) {
+    res.send(customers[query]);
+  }
+  for (let customer of customers){
+    if (customer.name==query){
+      res.send(customer)
     }
-  };
+  }
+  }
+  catch (e) {
+    console.log(e);
+    res.send("No customer with that index or name found");
+  }
+
+//  else res.send("No customer with that index or name found");
+};
 
 const createCustomer = async (req, res) => {
   const { name, address, email, phone } = req.body;
 
-  if (name && address.street && address.city && address.state && address.zipCode && email && phone) {
+  if (name && address && email && phone) {
     const newCustomer = {
       name,
       address,
@@ -55,6 +43,7 @@ const createCustomer = async (req, res) => {
       favoritedItems:[]
     };
     Customer.create(newCustomer);
+    console.log('Customer created')
     res.json(newCustomer);
   } else res.json("Need all the required information");
 };
