@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('./db');
 const bodyParser = require('body-parser');
-
+const cors = require ('cors')
 const customerControllers=require('./controllers/customerControllers')
 const clothesController = require("./controllers/clothesController")
 // require() imports and middleware here ^ ///////
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 // app.use() middleware here
 app.use(bodyParser.json());
-
+app.use(cors())
 
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))

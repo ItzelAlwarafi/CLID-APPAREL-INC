@@ -243,13 +243,14 @@ background-color: black;
   }
  
   .gallery{
-   margin-top: 20px;
-   display: flex;
+    margin-top: 20px;
+    display: flex;
     flex-direction: row;
     margin: 20px;
     float: left;
     align-content: center;
-   
+    color: white;
+    font-size: 8px;
 
   }
 .prodOpt{
