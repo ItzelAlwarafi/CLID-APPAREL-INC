@@ -5,7 +5,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const clothings = [
-            { Jeans1: {
+            {
                 productName: "Loose Carpenter Jeans",
                 type: "Denim",
                 sizes: ["28", "29", "30", "31", "32", "33", "34", "36", "38", "40" ],
@@ -14,8 +14,8 @@ const main = async () => {
                 gender: "men",
                 description: "It's vibe with a relaxed straight carpenter jean with an effortless slouch",
                 machineWashable: true,
-                img: "image/[Jeans] Men Loose Carpenter Jeans- white.jpeg"
-             } },
+                img:  "../image/[Jeans] Men Loose Carpenter Jeans- white.jpeg"
+             },
 
             {
                 productName: "Carpenter Jeans",
@@ -26,7 +26,7 @@ const main = async () => {
                 gender: "men",
                 description: "It's a relaxed carpenter jean with an slouch",
                 machineWashable: true,
-                img: "image/[Jeans]Men Loose Carpenter Jeans.avif"
+                img: "../image/[Jeans]Men Loose Carpenter Jeans.avif"
             },
 
             {
@@ -38,7 +38,7 @@ const main = async () => {
                 gender: "women",
                 description: "Old school. Meet new school. Our vintage-inspired pair that hugs all your curves.",
                 machineWashable: true,
-                img: "image/[Jeans] Women High Rise Cotton - Dark.avif"
+                img: "../image/[Jeans] Women High Rise Cotton - Dark.avif"
             },
 
             {
@@ -50,7 +50,7 @@ const main = async () => {
                 gender: "women",
                 description: "A relaxed essential straight jean with an effortless slouch. ",
                 machineWashable: true,
-                img: "image/[Jeans] Women High Rise Cotton - Light.avif"
+                img: "../image/[Jeans] Women High Rise Cotton - Light.avif"
             },
 
             {
@@ -62,7 +62,7 @@ const main = async () => {
                 gender: "unisex",
                 description: "From Harlem to the world. Inspired by archival denim, rooted in western Americana & made for all.",
                 machineWashable: true,
-                img: "image/[Jeans]Unisex Loose Jeans.avif"
+                img: "../image/[Jeans]Unisex Loose Jeans.avif"
             },
 
             {
@@ -74,7 +74,7 @@ const main = async () => {
                 gender: "men",
                 description: "This sweater is made with 52% recycled polyester. Soft poly-wool blend sweater.",
                 machineWashable: true,
-                img: "image/[Sweater] Men Crewneck - Beige.avif"
+                img: "../image/[Sweater] Men Crewneck - Beige.avif"
             },
 
             {
@@ -86,7 +86,7 @@ const main = async () => {
                 gender: "men",
                 description: "Textured cotton-wool blend sweater. Ribbed crewneck.",
                 machineWashable: true,
-                img: "image/[Sweater]Men Textured Crew Neck - Dark Night.avif"
+                img: "../image/[Sweater]Men Textured Crew Neck - Dark Night.avif"
             },
 
             {
@@ -98,7 +98,7 @@ const main = async () => {
                 gender: "women",
                 description: "This sweater is made with 24% recycled polyester. Soft shaker-stitch sweater.",
                 machineWashable: false,
-                img: "image/[Sweater] Women Shaker-Stitch - pink.avif"
+                img: "../image/[Sweater] Women Shaker-Stitch - pink.avif"
             },
 
             {
@@ -110,7 +110,7 @@ const main = async () => {
                 gender: "women",
                 description: "Soft, slightly cropped cotton pointelle sweater. Scalloped crewneck.",
                 machineWashable: false,
-                img: "image/[Sweater]Women Pointelle Sweater - green.avif"
+                img: "../image/[Sweater]Women Pointelle Sweater - green.avif"
             },
 
             {
@@ -122,7 +122,7 @@ const main = async () => {
                 gender: "unisex",
                 description: "Our softer than soft sweats. Made to be your new everywhere, always-on essential.",
                 machineWashable: true,
-                img: "image/Untitleddesign.jpg"
+                img: "../image/Untitleddesign.jpg"
             },
 
             {
@@ -134,7 +134,7 @@ const main = async () => {
                 gender: "men",
                 description: "Your new day-in, day-out, versatile sneakers. Comfortable, breathable, stain and odor resistant too.",
                 machineWashable: false,
-                img: "image/[Shoes]Men Alpine Sneakers - black.webp"
+                img: "../image/[Shoes]Men Alpine Sneakers - black.webp"
             },
 
             {
@@ -146,7 +146,7 @@ const main = async () => {
                 gender: "unisex",
                 description: "Our softer than soft sweats. Made to be your new everywhere, always-on essential.",
                 machineWashable: false,
-                img: "image/[Shoes] Men Brady Sneakers - Navy.webp"
+                img: "../image/[Shoes] Men Brady Sneakers - Navy.webp"
             },
 
             {
@@ -158,7 +158,7 @@ const main = async () => {
                 gender: "women",
                 description: "Your new day-in, day-out, versatile sneakers. Comfortable, breathable, stain and odor resistant too. ",
                 machineWashable: false,
-                img: "image/[Shoes]Women Lace Up Sneaker - white.avif"
+                img: "../image/[Shoes]Women Lace Up Sneaker - white.avif"
             },
 
             {
@@ -170,7 +170,7 @@ const main = async () => {
                 gender: "unisex",
                 description: "Vegan, platform sneaker with woven knit detailing.Textile upper with manmade outsole.",
                 machineWashable: false,
-                img: "image/[Shoes]Women Go To Platform Sneaker - brown.avif"
+                img: "../image/[Shoes]Women Go To Platform Sneaker - brown.avif"
             }
         ]
     await Clothes.insertMany(clothings)
